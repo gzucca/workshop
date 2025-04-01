@@ -44,6 +44,14 @@
   display: none !important;
 }
 
+p {
+  text-align: justify;
+}
+
+.justify {
+  text-align: justify !important;
+}
+
 .red-bg {
   background-color: red;
 }
@@ -175,6 +183,7 @@
     padding: 7px 22px;
   }
 }
+
 @media (min-width: 1025px) {
   .ctaButton {
     font-size: 1.21rem;
@@ -184,4 +193,12 @@
 
 .woocommerce-notices-wrapper {
   display: none !important;
+}
+
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+  body > div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 }
