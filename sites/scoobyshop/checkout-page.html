@@ -1,0 +1,1256 @@
+<main id="main" class="site-main hfeed">
+
+
+  <div class="ct-container-full" data-content="normal" data-vertical-spacing="top:bottom">
+
+
+
+    <article id="post-1060" class="post-1060 page type-page status-publish hentry">
+
+
+      <div class="hero-section is-width-constrained" data-type="type-1">
+        <header class="entry-header">
+          <h1 class="page-title" title="Checkout" itemprop="headline">Checkout</h1>
+        </header>
+      </div>
+
+
+      <div class="entry-content is-layout-constrained">
+        <div class="woocommerce">
+          <div class="woocommerce-notices-wrapper"></div>
+          <div class="woocommerce-notices-wrapper"></div>
+          <div class="wt_coupon_wrapper">
+            <style type="text/css">
+              .wt_sc_single_coupon {
+                display: inline-block;
+                width: 300px;
+                max-width: 350px;
+                height: auto;
+                padding: 5px;
+                text-align: center;
+                background: #2890a8;
+                color: #ffffff;
+                position: relative;
+                box-sizing: border-box;
+                direction: ltr;
+              }
+
+              .wt_sc_single_coupon .wt_sc_hidden {
+                display: none;
+              }
+
+              .wt_sc_single_coupon.active-coupon {
+                cursor: pointer;
+              }
+
+              .wt_sc_coupon_amount {
+                font-size: 30px;
+                margin-right: 5px;
+                line-height: 22px;
+                font-weight: 500;
+              }
+
+              .wt_sc_coupon_type {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 22px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+
+              .wt_sc_coupon_code {
+                float: left;
+                width: 100%;
+                font-size: 19px;
+                line-height: 22px;
+              }
+
+              .wt_sc_coupon_code code {
+                background: none;
+                font-size: 15px;
+                opacity: 0.7;
+                display: inline-block;
+                line-height: 22px;
+                max-width: 100%;
+                word-wrap: break-word;
+              }
+
+              .wt_sc_coupon_content {
+                padding: 10px 0px;
+                float: left;
+                width: 100%;
+              }
+
+              .wt_sc_coupon_desc_wrapper:hover .wt_sc_coupon_desc {
+                display: block
+              }
+
+              .wt_sc_coupon_desc {
+                position: absolute;
+                top: -18px;
+                background: #333;
+                color: #fff;
+                text-shadow: none;
+                text-align: left;
+                font-size: 12px;
+                width: 200px;
+                right: -220px;
+                padding: 10px 20px;
+                z-index: 100;
+                border-radius: 8px;
+                display: none;
+              }
+
+              .wt_sc_coupon_desc ul {
+                margin: 0 !important;
+                text-align: left;
+                list-style-type: disc
+              }
+
+              .wt_sc_coupon_desc ul li {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: auto;
+                min-height: auto;
+                list-style-type: disc !important
+              }
+
+              .wt_sc_coupon_desc_wrapper i.info {
+                position: absolute;
+                top: 6px;
+                right: 10px;
+                font-size: 13px;
+                font-weight: 700;
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                text-shadow: none;
+                color: #2890a8;
+                font-style: normal;
+                cursor: pointer;
+                line-height: 20px;
+                box-shadow: 1px 1px 4px #333;
+              }
+
+              .wt_sc_credit_history_url {
+                font-size: 13px;
+                font-weight: 700;
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                text-shadow: none;
+                font-style: normal;
+                cursor: pointer;
+                position: absolute;
+                right: 12px;
+                bottom: 10px;
+                text-align: center;
+                line-height: 20px;
+                text-decoration: none !important;
+                background: #fff
+              }
+
+              .wt_sc_credit_history_url span {
+                font: bold 14px/1 dashicons
+              }
+
+              a.wt_sc_credit_history_url span:before {
+                line-height: 20px;
+                color: #2890a8;
+              }
+
+              .wbte_sc_coupon_layout_expired_text {
+                color: #D63638;
+                font-size: 13px;
+                font-weight: 500;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+              }
+
+              .wbte_sc_coupon_layout_expired_overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #c5c5c580;
+                z-index: 9;
+              }
+
+              @media only screen and (max-width: 700px) {
+                .wt_sc_coupon_content {
+                  z-index: 5;
+                }
+
+                .wt_sc_single_coupon .wt_sc_coupon_desc {
+                  z-index: 100;
+                  right: auto;
+                  top: 30px;
+                  left: 0px;
+                }
+              }
+            </style>
+          </div>
+          <form name="checkout" method="post" class="checkout woocommerce-checkout ct-woocommerce-checkout"
+            action="https://scoobyshop.com.ar/checkout/" enctype="multipart/form-data" aria-label="Finalizar compra"
+            novalidate="novalidate">
+
+
+            <div class="ct-customer-details">
+              <div class="col2-set" id="customer_details">
+                <div class="col-1">
+                  <wc-order-attribution-inputs><input type="hidden" name="wc_order_attribution_source_type"
+                      value="typein"><input type="hidden" name="wc_order_attribution_referrer" value="(none)"><input
+                      type="hidden" name="wc_order_attribution_utm_campaign" value="(none)"><input type="hidden"
+                      name="wc_order_attribution_utm_source" value="(direct)"><input type="hidden"
+                      name="wc_order_attribution_utm_medium" value="(none)"><input type="hidden"
+                      name="wc_order_attribution_utm_content" value="(none)"><input type="hidden"
+                      name="wc_order_attribution_utm_id" value="(none)"><input type="hidden"
+                      name="wc_order_attribution_utm_term" value="(none)"><input type="hidden"
+                      name="wc_order_attribution_utm_source_platform" value="(none)"><input type="hidden"
+                      name="wc_order_attribution_utm_creative_format" value="(none)"><input type="hidden"
+                      name="wc_order_attribution_utm_marketing_tactic" value="(none)"><input type="hidden"
+                      name="wc_order_attribution_session_entry" value="https://scoobyshop.com.ar/"><input type="hidden"
+                      name="wc_order_attribution_session_start_time" value="2025-05-13 14:59:32"><input type="hidden"
+                      name="wc_order_attribution_session_pages" value="10"><input type="hidden"
+                      name="wc_order_attribution_session_count" value="4"><input type="hidden"
+                      name="wc_order_attribution_user_agent"
+                      value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"></wc-order-attribution-inputs>
+                  <div class="woocommerce-billing-fields">
+
+                    <h3>Detalles de facturación</h3>
+
+
+
+                    <div class="woocommerce-billing-fields__field-wrapper">
+                      <p class="form-row form-row-first thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                        id="billing_first_name_field" data-priority="10"><label for="billing_first_name"
+                          class="required_field">Nombre&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                            type="text" class="input-text " name="billing_first_name" id="billing_first_name"
+                            placeholder="" value="Gonzalo" aria-required="true" autocomplete="given-name"></span></p>
+                      <p class="form-row form-row-last thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                        id="billing_last_name_field" data-priority="20"><label for="billing_last_name"
+                          class="required_field">Apellidos&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                            type="text" class="input-text " name="billing_last_name" id="billing_last_name"
+                            placeholder="" value="Zucca" aria-required="true" autocomplete="family-name"></span></p>
+                      <p class="form-row form-row-wide thwcfd-optional thwcfd-field-wrapper thwcfd-field-text"
+                        id="billing_company_field" data-priority="30"><label for="billing_company" class="">Nombre de la
+                          empresa&nbsp;<span class="optional">(opcional)</span></label><span
+                          class="woocommerce-input-wrapper"><input type="text" class="input-text "
+                            name="billing_company" id="billing_company" placeholder="" value=""
+                            autocomplete="organization"></span></p>
+                      <p class="form-row form-row-wide address-field update_totals_on_change thwcfd-required thwcfd-field-wrapper thwcfd-field-country validate-required"
+                        id="billing_country_field" data-priority="40"><label for="billing_country"
+                          class="required_field">País / Región&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span
+                          class="woocommerce-input-wrapper"><strong>Argentina</strong><input type="hidden"
+                            name="billing_country" id="billing_country" value="AR" aria-required="true"
+                            autocomplete="country" class="country_to_state" readonly="readonly"></span></p>
+                      <p class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                        id="billing_address_1_field" data-priority="50"><label for="billing_address_1"
+                          class="required_field">Calle&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                            type="text" class="input-text " name="billing_address_1" id="billing_address_1"
+                            placeholder="Calle" value="Mariano Acosta 2900" aria-required="true"
+                            autocomplete="address-line1"></span></p>
+                      <p class="form-row form-row-wide thwcfd-field-wrapper thwcfd-field-text validate-required"
+                        id="billing_altura_field" data-priority="60"><label for="billing_altura"
+                          class="required_field">Altura de la calle&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                            type="text" class="input-text " name="billing_altura" id="billing_altura" placeholder=""
+                            value="2900" aria-required="true"></span></p>
+                      <p class="form-row thwcfd-optional thwcfd-field-wrapper thwcfd-field-text"
+                        id="billing_address_2_field" data-priority="70"><label for="billing_address_2" class="">piso y
+                          departamento&nbsp;<span class="optional">(opcional)</span></label><span
+                          class="woocommerce-input-wrapper"><input type="text" class="input-text "
+                            name="billing_address_2" id="billing_address_2" placeholder="piso y departamento" value=""
+                            autocomplete="address-line2"></span></p>
+                      <p class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                        id="billing_city_field" data-priority="80"
+                        data-o_class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required">
+                        <label for="billing_city" class="required_field">Ciudad&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                            type="text" class="input-text " name="billing_city" id="billing_city" placeholder=""
+                            value="Presidente Derqui" aria-required="true" autocomplete="address-level2"></span></p>
+                      <p class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-state validate-required validate-state"
+                        id="billing_state_field" data-priority="90"
+                        data-o_class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-state validate-required validate-state">
+                        <label for="billing_state" class="required_field">Región / Provincia&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><select
+                            name="billing_state" id="billing_state" class="state_select select2-hidden-accessible"
+                            aria-required="true" autocomplete="address-level1" data-placeholder="Elige una opción…"
+                            data-input-classes="" data-label="Región / Provincia" tabindex="-1" aria-hidden="true">
+                            <option value="">Elige una opción…</option>
+                            <option value="C">Ciudad Autónoma de Buenos Aires</option>
+                            <option value="B">Buenos Aires</option>
+                            <option value="K">Catamarca</option>
+                            <option value="H">Chaco</option>
+                            <option value="U">Chubut</option>
+                            <option value="X">Córdoba</option>
+                            <option value="W">Corrientes</option>
+                            <option value="E">Entre Ríos</option>
+                            <option value="P">Formosa</option>
+                            <option value="Y">Jujuy</option>
+                            <option value="L">La Pampa</option>
+                            <option value="F">La Rioja</option>
+                            <option value="M">Mendoza</option>
+                            <option value="N">Misiones</option>
+                            <option value="Q">Neuquén</option>
+                            <option value="R">Río Negro</option>
+                            <option value="A">Salta</option>
+                            <option value="J">San Juan</option>
+                            <option value="D">San Luis</option>
+                            <option value="Z">Santa Cruz</option>
+                            <option value="S">Santa Fe</option>
+                            <option value="G">Santiago del Estero</option>
+                            <option value="V">Tierra del Fuego</option>
+                            <option value="T">Tucumán</option>
+                          </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                            style="width: 100%;"><span class="selection"><span
+                                class="select2-selection select2-selection--single" aria-haspopup="true"
+                                aria-expanded="false" tabindex="0" aria-required="true" aria-label="Región / Provincia"
+                                role="combobox"><span class="select2-selection__rendered" aria-required="true"
+                                  id="select2-billing_state-container" role="textbox" aria-readonly="true"
+                                  title="Buenos Aires">Buenos Aires</span><span class="select2-selection__arrow"
+                                  role="presentation"><b role="presentation"></b></span></span></span><span
+                              class="dropdown-wrapper" aria-hidden="true"></span></span></span></p>
+                      <p class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required validate-postcode"
+                        id="billing_postcode_field" data-priority="100"
+                        data-o_class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required validate-postcode">
+                        <label for="billing_postcode" class="required_field">Código postal / ZIP&nbsp;<span
+                            class="required" aria-hidden="true">*</span></label><span
+                          class="woocommerce-input-wrapper"><input type="text" class="input-text "
+                            name="billing_postcode" id="billing_postcode" placeholder="" value="1635"
+                            aria-required="true" autocomplete="postal-code" maxlength="4"></span></p>
+                      <p class="form-row form-row-wide thwcfd-required thwcfd-field-wrapper thwcfd-field-tel validate-required validate-phone"
+                        id="billing_phone_field" data-priority="110"><label for="billing_phone"
+                          class="required_field">Teléfono&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input type="tel"
+                            class="input-text " name="billing_phone" id="billing_phone" placeholder=""
+                            value="1170623904" aria-required="true" autocomplete="tel"></span></p>
+                      <p class="form-row form-row-wide thwcfd-required thwcfd-field-wrapper thwcfd-field-email validate-required validate-email"
+                        id="billing_email_field" data-priority="120"><label for="billing_email"
+                          class="required_field">Dirección de correo electrónico&nbsp;<span class="required"
+                            aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                            type="email" class="input-text " name="billing_email" id="billing_email" placeholder=""
+                            value="gonzalo.zucca@gmail.com" aria-required="true" autocomplete="email"></span></p>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="col-2">
+                  <div class="woocommerce-shipping-fields">
+
+                    <h3 id="ship-to-different-address">
+                      <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                        <input id="ship-to-different-address-checkbox"
+                          class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
+                          type="checkbox" name="ship_to_different_address" value="1"> <span>¿Enviar a una dirección
+                          diferente?</span>
+                      </label>
+                    </h3>
+
+                    <div class="shipping_address" style="display: none;">
+
+
+                      <div class="woocommerce-shipping-fields__field-wrapper">
+                        <p class="form-row form-row-first thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                          id="shipping_first_name_field" data-priority="10"><label for="shipping_first_name"
+                            class="required_field">Nombre&nbsp;<span class="required"
+                              aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                              type="text" class="input-text " name="shipping_first_name" id="shipping_first_name"
+                              placeholder="" value="Gonzalo" aria-required="true" autocomplete="given-name"></span></p>
+                        <p class="form-row form-row-last thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                          id="shipping_last_name_field" data-priority="20"><label for="shipping_last_name"
+                            class="required_field">Apellidos&nbsp;<span class="required"
+                              aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                              type="text" class="input-text " name="shipping_last_name" id="shipping_last_name"
+                              placeholder="" value="Zucca" aria-required="true" autocomplete="family-name"></span></p>
+                        <p class="form-row form-row-wide thwcfd-optional thwcfd-field-wrapper thwcfd-field-text"
+                          id="shipping_company_field" data-priority="30"><label for="shipping_company" class="">Nombre
+                            de la empresa&nbsp;<span class="optional">(opcional)</span></label><span
+                            class="woocommerce-input-wrapper"><input type="text" class="input-text "
+                              name="shipping_company" id="shipping_company" placeholder="" value=""
+                              autocomplete="organization"></span></p>
+                        <p class="form-row form-row-wide address-field update_totals_on_change thwcfd-required thwcfd-field-wrapper thwcfd-field-country validate-required"
+                          id="shipping_country_field" data-priority="40"><label for="shipping_country"
+                            class="required_field">País / Región&nbsp;<span class="required"
+                              aria-hidden="true">*</span></label><span
+                            class="woocommerce-input-wrapper"><strong>Argentina</strong><input type="hidden"
+                              name="shipping_country" id="shipping_country" value="AR" aria-required="true"
+                              autocomplete="country" class="country_to_state" readonly="readonly"></span></p>
+                        <p class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                          id="shipping_address_1_field" data-priority="50"><label for="shipping_address_1"
+                            class="required_field">Calle&nbsp;<span class="required"
+                              aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                              type="text" class="input-text " name="shipping_address_1" id="shipping_address_1"
+                              placeholder="Calle" value="Mariano Acosta 2900" aria-required="true"
+                              autocomplete="address-line1"></span></p>
+                        <p class="form-row thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                          id="shipping_address_2_field" data-priority="60"><label for="shipping_address_2"
+                            class="required_field">Altura, piso y departamento&nbsp;<span class="required"
+                              aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                              type="text" class="input-text " name="shipping_address_2" id="shipping_address_2"
+                              placeholder="Altura, piso y departamento" value="" aria-required="true"
+                              autocomplete="address-line2"></span></p>
+                        <p class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required"
+                          id="shipping_city_field" data-priority="70"
+                          data-o_class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required">
+                          <label for="shipping_city" class="required_field">Ciudad&nbsp;<span class="required"
+                              aria-hidden="true">*</span></label><span class="woocommerce-input-wrapper"><input
+                              type="text" class="input-text " name="shipping_city" id="shipping_city" placeholder=""
+                              value="Presidente Derqui" aria-required="true" autocomplete="address-level2"></span></p>
+                        <p class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-state validate-required validate-state"
+                          id="shipping_state_field" data-priority="80"
+                          data-o_class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-state validate-required validate-state">
+                          <label for="shipping_state" class="required_field">Región / Provincia&nbsp;<span
+                              class="required" aria-hidden="true">*</span></label><span
+                            class="woocommerce-input-wrapper"><select name="shipping_state" id="shipping_state"
+                              class="state_select select2-hidden-accessible" aria-required="true"
+                              autocomplete="address-level1" data-placeholder="Elige una opción…" data-input-classes=""
+                              data-label="Región / Provincia" tabindex="-1" aria-hidden="true">
+                              <option value="">Elige una opción…</option>
+                              <option value="C">Ciudad Autónoma de Buenos Aires</option>
+                              <option value="B">Buenos Aires</option>
+                              <option value="K">Catamarca</option>
+                              <option value="H">Chaco</option>
+                              <option value="U">Chubut</option>
+                              <option value="X">Córdoba</option>
+                              <option value="W">Corrientes</option>
+                              <option value="E">Entre Ríos</option>
+                              <option value="P">Formosa</option>
+                              <option value="Y">Jujuy</option>
+                              <option value="L">La Pampa</option>
+                              <option value="F">La Rioja</option>
+                              <option value="M">Mendoza</option>
+                              <option value="N">Misiones</option>
+                              <option value="Q">Neuquén</option>
+                              <option value="R">Río Negro</option>
+                              <option value="A">Salta</option>
+                              <option value="J">San Juan</option>
+                              <option value="D">San Luis</option>
+                              <option value="Z">Santa Cruz</option>
+                              <option value="S">Santa Fe</option>
+                              <option value="G">Santiago del Estero</option>
+                              <option value="V">Tierra del Fuego</option>
+                              <option value="T">Tucumán</option>
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                              style="width: 100%;"><span class="selection"><span
+                                  class="select2-selection select2-selection--single" aria-haspopup="true"
+                                  aria-expanded="false" tabindex="0" aria-required="true"
+                                  aria-label="Región / Provincia" role="combobox"><span
+                                    class="select2-selection__rendered" aria-required="true"
+                                    id="select2-shipping_state-container" role="textbox" aria-readonly="true"
+                                    title="Buenos Aires">Buenos Aires</span><span class="select2-selection__arrow"
+                                    role="presentation"><b role="presentation"></b></span></span></span><span
+                                class="dropdown-wrapper" aria-hidden="true"></span></span></span></p>
+                        <p class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required validate-postcode"
+                          id="shipping_postcode_field" data-priority="90"
+                          data-o_class="form-row form-row-wide address-field thwcfd-required thwcfd-field-wrapper thwcfd-field-text validate-required validate-postcode">
+                          <label for="shipping_postcode" class="required_field">Código postal / ZIP&nbsp;<span
+                              class="required" aria-hidden="true">*</span></label><span
+                            class="woocommerce-input-wrapper"><input type="text" class="input-text "
+                              name="shipping_postcode" id="shipping_postcode" placeholder="" value="1635"
+                              aria-required="true" autocomplete="postal-code" maxlength="4"></span></p>
+                      </div>
+
+
+                    </div>
+
+                  </div>
+                  <div class="woocommerce-additional-fields">
+
+
+
+                    <div class="woocommerce-additional-fields__field-wrapper">
+                      <p class="form-row notes thwcfd-field-wrapper thwcfd-field-textarea" id="order_comments_field"
+                        data-priority=""><label for="order_comments" class="">Notas del pedido&nbsp;<span
+                            class="optional">(opcional)</span></label><span class="woocommerce-input-wrapper"><textarea
+                            name="order_comments" class="input-text " id="order_comments"
+                            placeholder="Notas sobre tu pedido, por ejemplo, notas especiales para la entrega." rows="2"
+                            cols="5"></textarea></span></p>
+                    </div>
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="ct-order-review">
+              <h3 id="order_review_heading">Tu pedido</h3>
+
+
+              <div id="order_review" class="woocommerce-checkout-review-order">
+                <table class="shop_table woocommerce-checkout-review-order-table">
+                  <thead>
+                    <tr>
+                      <th class="product-name">Producto</th>
+                      <th class="product-total">Subtotal</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="cart_item">
+                      <td class="product-name">
+                        <div class="ct-checkout-cart-item">
+                          <figure class="ct-media-container"><img width="300" height="300"
+                              src="https://scoobyshop.com.ar/wp-content/uploads/2024/11/33-300x300.webp" loading="lazy"
+                              decoding="async"
+                              srcset="https://scoobyshop.com.ar/wp-content/uploads/2024/11/33-300x300.webp 300w, https://scoobyshop.com.ar/wp-content/uploads/2024/11/33-800x801.webp 800w, https://scoobyshop.com.ar/wp-content/uploads/2024/11/33.webp 980w"
+                              sizes="auto, (max-width: 300px) 100vw, 300px" itemprop="image" class=""
+                              style="aspect-ratio: 1/1;" title="33.webp" alt="Aceite Lubricante Andis"></figure>
+                          <div class="ct-checkout-cart-item-content">
+                            <div class="ct-checkout-cart-item-title">Alicate Andis <strong
+                                class="product-quantity">×&nbsp;1</strong></div>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td class="product-total">
+                        <span class="woocommerce-Price-amount amount"><bdi><span
+                              class="woocommerce-Price-currencySymbol">$</span>&nbsp;33.140,00</bdi></span>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+
+                    <tr class="cart-subtotal">
+                      <th>Subtotal</th>
+                      <td><span class="woocommerce-Price-amount amount"><bdi><span
+                              class="woocommerce-Price-currencySymbol">$</span>&nbsp;33.140,00</bdi></span></td>
+                    </tr>
+
+
+
+
+                    <tr class="woocommerce-shipping-totals shipping">
+
+                      <td colspan="2">
+                        <div class="ct-shipping-heading">Envío</div>
+                        <ul id="shipping_method" class="woocommerce-shipping-methods">
+                          <li>
+                            <input type="hidden" name="shipping_method[0]" data-index="0"
+                              id="shipping_method_0_local_pickup15" value="local_pickup:15"
+                              class="shipping_method"><label for="shipping_method_0_local_pickup15">Retiro por
+                              local</label>
+                          </li>
+                        </ul>
+
+
+                      </td>
+                    </tr>
+
+
+
+
+
+
+                    <tr class="order-total">
+                      <th>Total</th>
+                      <td><strong><span class="woocommerce-Price-amount amount"><bdi><span
+                                class="woocommerce-Price-currencySymbol">$</span>&nbsp;33.140,00</bdi></span></strong>
+                      </td>
+                    </tr>
+
+
+                  </tfoot>
+                </table>
+                <div id="order_sucursal_mainca" style="display:none; margin-bottom: 50px;" class="hideall"><img
+                    class="ca-logo"
+                    src="https://scoobyshop.com.ar/wp-content/plugins/wanderlust-ca/includes/img/suc-ca.png">
+                  <h3>Sucursal Correo Argentino</h3><small>Si seleccionaste retirar por sucursal, elegí tu sucursal en
+                    el listado.</small>
+                  <div id="order_partido_mainca_result_cargando">Cargando Partidos...</div>
+                  <div id="order_sucursal_mainca_result_cargando">Cargando Sucursales...</div>
+                  <div id="order_sucursal_mainca_result" style="display:none;">Cargando Sucursales...</div>
+                </div>
+                <div id="payment" class="woocommerce-checkout-payment">
+                  <ul class="wc_payment_methods payment_methods methods">
+                    <li class="wc_payment_method payment_method_woo-mercado-pago-basic">
+                      <input id="payment_method_woo-mercado-pago-basic" type="radio" class="input-radio"
+                        name="payment_method" value="woo-mercado-pago-basic" checked="checked" data-order_button_text=""
+                        style="display: none;">
+
+                      <label for="payment_method_woo-mercado-pago-basic">
+                        Medios de pago disponibles en Mercado Pago <img
+                          src="https://scoobyshop.com.ar/wp-content/plugins/woocommerce-mercadopago/assets/images/icons/icon-mp.png?ver=8.0.1"
+                          alt="Medios de pago disponibles en Mercado Pago"> </label>
+                      <div class="payment_box payment_method_woo-mercado-pago-basic">
+
+                        <div class="mp-checkout-container">
+
+                          <div class="mp-checkout-pro-container">
+                            <div class="mp-checkout-pro-content">
+
+                              <div class="mp-checkout-pro-checkout-benefits">
+                                <checkout-benefits title="Inicia sesión en Mercado Pago y obtén beneficios"
+                                  title-align="center"
+                                  items="[{&quot;title&quot;:&quot;Paga r\u00e1pido&quot;,&quot;subtitle&quot;:&quot;Usa tu dinero disponible o tarjetas guardadas.&quot;,&quot;image&quot;:{&quot;src&quot;:&quot;https:\/\/scoobyshop.com.ar\/wp-content\/plugins\/woocommerce-mercadopago\/assets\/images\/checkouts\/basic\/blue-wallet.png?ver=8.0.1&quot;,&quot;alt&quot;:&quot;Imagen de billetera azul&quot;}},{&quot;title&quot;:&quot;Accede a cuotas&quot;,&quot;subtitle&quot;:&quot;Paga con o sin tarjeta de cr\u00e9dito.&quot;,&quot;image&quot;:{&quot;src&quot;:&quot;https:\/\/scoobyshop.com.ar\/wp-content\/plugins\/woocommerce-mercadopago\/assets\/images\/checkouts\/basic\/blue-phone-installments.png?ver=8.0.1&quot;,&quot;alt&quot;:&quot;Imagen de cuotas de tel\u00e9fono azul&quot;}},{&quot;title&quot;:&quot;Compra con confianza&quot;,&quot;subtitle&quot;:&quot;Recibe ayuda si tienes alg\u00fan problema con tu compra.&quot;,&quot;image&quot;:{&quot;src&quot;:&quot;https:\/\/scoobyshop.com.ar\/wp-content\/plugins\/woocommerce-mercadopago\/assets\/images\/checkouts\/basic\/blue-protection.png?ver=8.0.1&quot;,&quot;alt&quot;:&quot;Imagen de protecci\u00f3n azul&quot;}}]"
+                                  list-mode="image">
+                                  <div class="mp-checkout-benefits-container">
+                                    <p class="mp-checkout-benefits-title" style="text-align: center !important;">Inicia
+                                      sesión en Mercado Pago y obtén beneficios</p>
+                                    <div class="mp-checkout-benefits-container-list">
+                                      <div class="mp-checkout-benefits-item">
+                                        <div class="mp-checkout-benefits-image-list"><img
+                                            class="mp-checkout-benefits-image"
+                                            src="https://scoobyshop.com.ar/wp-content/plugins/woocommerce-mercadopago/assets/images/checkouts/basic/blue-wallet.png?ver=8.0.1"
+                                            alt="Imagen de billetera azul"></div><span>
+                                          <p class="mp-checkout-benefits-item-title">Paga rápido</p>
+                                          <p class="mp-checkout-benefits-item-subtitle">Usa tu dinero disponible o
+                                            tarjetas guardadas.</p>
+                                        </span>
+                                      </div>
+                                      <div class="mp-checkout-benefits-item">
+                                        <div class="mp-checkout-benefits-image-list"><img
+                                            class="mp-checkout-benefits-image"
+                                            src="https://scoobyshop.com.ar/wp-content/plugins/woocommerce-mercadopago/assets/images/checkouts/basic/blue-phone-installments.png?ver=8.0.1"
+                                            alt="Imagen de cuotas de teléfono azul"></div><span>
+                                          <p class="mp-checkout-benefits-item-title">Accede a cuotas</p>
+                                          <p class="mp-checkout-benefits-item-subtitle">Paga con o sin tarjeta de
+                                            crédito.</p>
+                                        </span>
+                                      </div>
+                                      <div class="mp-checkout-benefits-item">
+                                        <div class="mp-checkout-benefits-image-list"><img
+                                            class="mp-checkout-benefits-image"
+                                            src="https://scoobyshop.com.ar/wp-content/plugins/woocommerce-mercadopago/assets/images/checkouts/basic/blue-protection.png?ver=8.0.1"
+                                            alt="Imagen de protección azul"></div><span>
+                                          <p class="mp-checkout-benefits-item-title">Compra con confianza</p>
+                                          <p class="mp-checkout-benefits-item-subtitle">Recibe ayuda si tienes algún
+                                            problema con tu compra.</p>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </checkout-benefits>
+                              </div>
+
+                              <div class="mp-checkout-pro-payment-methods">
+                                <payment-methods-v2 title="Medios de pago disponibles"
+                                  methods="[{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png&quot;,&quot;alt&quot;:&quot;debmaster&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png&quot;,&quot;alt&quot;:&quot;visa&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/c9f71470-6f07-11ec-9b23-071a218bbe35-xl@2x.png&quot;,&quot;alt&quot;:&quot;cabal&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/26fbb110-571c-11e8-95d8-631c1a9a92a9-xl@2x.png&quot;,&quot;alt&quot;:&quot;cmr&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/d7e55980-f3be-11eb-8e0d-6f4af49bf82e-xl@2x.png&quot;,&quot;alt&quot;:&quot;argencard&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/751ea930-571a-11e8-9a2d-4b2bd7b1bf77-xl@2x.png&quot;,&quot;alt&quot;:&quot;diners&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/b08cf800-4c1a-11e9-9888-a566cbf302df-xl@2x.png&quot;,&quot;alt&quot;:&quot;amex&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png&quot;,&quot;alt&quot;:&quot;master&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/af139ad0-d705-11ee-8925-8314c09d1640-xl@2x.png&quot;,&quot;alt&quot;:&quot;naranja&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/c9f71470-6f07-11ec-9b23-071a218bbe35-xl@2x.png&quot;,&quot;alt&quot;:&quot;debcabal&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/ce454480-445f-11eb-bf78-3b1ee7bf744c-xl@2x.png&quot;,&quot;alt&quot;:&quot;maestro&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png&quot;,&quot;alt&quot;:&quot;debvisa&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/33ea00e0-571a-11e8-8364-bff51f08d440-xl@2x.png&quot;,&quot;alt&quot;:&quot;tarshop&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png&quot;,&quot;alt&quot;:&quot;master&quot;},{&quot;src&quot;:&quot;https:\/\/http2.mlstatic.com\/storage\/logos-api-admin\/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png&quot;,&quot;alt&quot;:&quot;visa&quot;},{&quot;src&quot;:&quot;https:\/\/www.mercadopago.com\/org-img\/MP3\/API\/logos\/rapipago.gif&quot;,&quot;alt&quot;:&quot;rapipago&quot;},{&quot;src&quot;:&quot;https:\/\/www.mercadopago.com\/org-img\/MP3\/API\/logos\/pagofacil.gif&quot;,&quot;alt&quot;:&quot;pagofacil&quot;},{&quot;src&quot;:&quot;https:\/\/scoobyshop.com.ar\/wp-content\/plugins\/woocommerce-mercadopago\/assets\/images\/icons\/icon-credits.png?ver=8.0.1&quot;,&quot;alt&quot;:&quot;Credits image&quot;}]">
+                                  <div class="mp-payment-methods-v2-container">
+                                    <div class="mp-payment-methods-v2-content">
+                                      <p class="mp-payment-methods-v2-title">Medios de pago disponibles</p>
+                                      <div class="mp-payment-methods-v2-list"><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png"
+                                          alt="debmaster">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="debmaster"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png"
+                                          alt="visa">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="visa"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/c9f71470-6f07-11ec-9b23-071a218bbe35-xl@2x.png"
+                                          alt="cabal">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="cabal"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/c9f71470-6f07-11ec-9b23-071a218bbe35-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/26fbb110-571c-11e8-95d8-631c1a9a92a9-xl@2x.png"
+                                          alt="cmr">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="cmr"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/26fbb110-571c-11e8-95d8-631c1a9a92a9-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/d7e55980-f3be-11eb-8e0d-6f4af49bf82e-xl@2x.png"
+                                          alt="argencard">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="argencard"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/d7e55980-f3be-11eb-8e0d-6f4af49bf82e-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/751ea930-571a-11e8-9a2d-4b2bd7b1bf77-xl@2x.png"
+                                          alt="diners">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="diners"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/751ea930-571a-11e8-9a2d-4b2bd7b1bf77-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/b08cf800-4c1a-11e9-9888-a566cbf302df-xl@2x.png"
+                                          alt="amex">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="amex"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/b08cf800-4c1a-11e9-9888-a566cbf302df-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png"
+                                          alt="master">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="master"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/af139ad0-d705-11ee-8925-8314c09d1640-xl@2x.png"
+                                          alt="naranja">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="naranja"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/af139ad0-d705-11ee-8925-8314c09d1640-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo
+                                          src="https://http2.mlstatic.com/storage/logos-api-admin/c9f71470-6f07-11ec-9b23-071a218bbe35-xl@2x.png"
+                                          alt="debcabal">
+                                          <div class="mp-payment-method-logo-container"><img
+                                              class="mp-payment-method-logo-image" alt="debcabal"
+                                              src="https://http2.mlstatic.com/storage/logos-api-admin/c9f71470-6f07-11ec-9b23-071a218bbe35-xl@2x.png">
+                                          </div>
+                                        </payment-method-logo><payment-method-logo-slider
+                                          methods="[{&quot;src&quot;:&quot;https://http2.mlstatic.com/storage/logos-api-admin/ce454480-445f-11eb-bf78-3b1ee7bf744c-xl@2x.png&quot;,&quot;alt&quot;:&quot;maestro&quot;},{&quot;src&quot;:&quot;https://http2.mlstatic.com/storage/logos-api-admin/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png&quot;,&quot;alt&quot;:&quot;debvisa&quot;},{&quot;src&quot;:&quot;https://http2.mlstatic.com/storage/logos-api-admin/33ea00e0-571a-11e8-8364-bff51f08d440-xl@2x.png&quot;,&quot;alt&quot;:&quot;tarshop&quot;},{&quot;src&quot;:&quot;https://http2.mlstatic.com/storage/logos-api-admin/0daa1670-5c81-11ec-ae75-df2bef173be2-xl@2x.png&quot;,&quot;alt&quot;:&quot;master&quot;},{&quot;src&quot;:&quot;https://http2.mlstatic.com/storage/logos-api-admin/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png&quot;,&quot;alt&quot;:&quot;visa&quot;},{&quot;src&quot;:&quot;https://www.mercadopago.com/org-img/MP3/API/logos/rapipago.gif&quot;,&quot;alt&quot;:&quot;rapipago&quot;},{&quot;src&quot;:&quot;https://www.mercadopago.com/org-img/MP3/API/logos/pagofacil.gif&quot;,&quot;alt&quot;:&quot;pagofacil&quot;},{&quot;src&quot;:&quot;https://scoobyshop.com.ar/wp-content/plugins/woocommerce-mercadopago/assets/images/icons/icon-credits.png?ver=8.0.1&quot;,&quot;alt&quot;:&quot;Credits image&quot;}]">
+                                          <div class="mp-payment-method-logo-slider-container">
+                                            <div class="mp-payment-method-logo-slider-content"><payment-method-logo
+                                                src="https://http2.mlstatic.com/storage/logos-api-admin/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png"
+                                                alt="visa">
+                                                <div class="mp-payment-method-logo-container"><img
+                                                    class="mp-payment-method-logo-image" alt="visa"
+                                                    src="https://http2.mlstatic.com/storage/logos-api-admin/d589be70-eb86-11e9-b9a8-097ac027487d-xl@2x.png">
+                                                </div>
+                                              </payment-method-logo></div>
+                                          </div>
+                                        </payment-method-logo-slider></div>
+                                    </div>
+                                  </div>
+                                </payment-methods-v2>
+                              </div>
+
+                              <div class="mp-checkout-pro-redirect">
+                                <checkout-redirect-v2
+                                  text="Al continuar, te llevaremos a Mercado Pago para completar tu compra de forma segura."
+                                  src="https://scoobyshop.com.ar/wp-content/plugins/woocommerce-mercadopago/assets/images/checkouts/basic/cho-pro-redirect-v2.png?ver=8.0.1"
+                                  alt="Imagen de redirección de Checkout Pro">
+                                  <div class="mp-checkout-redirect-v2-container"
+                                    data-cy="checkout-redirect-v2-container"><img class="mp-checkout-redirect-v2-image"
+                                      src="https://scoobyshop.com.ar/wp-content/plugins/woocommerce-mercadopago/assets/images/checkouts/basic/cho-pro-redirect-v2.png?ver=8.0.1"
+                                      alt="Imagen de redirección de Checkout Pro">
+                                    <p class="mp-checkout-redirect-v2-text">Al continuar, te llevaremos a Mercado Pago
+                                      para completar tu compra de forma segura.</p>
+                                  </div>
+                                </checkout-redirect-v2>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mp-checkout-pro-terms-and-conditions">
+                            <terms-and-conditions description="Al continuar, aceptas nuestros"
+                              link-text="Términos y condiciones"
+                              link-src="https://www.mercadopago.com.ar/ayuda/terminos-y-politicas_194">
+                              <div class="mp-terms-and-conditions-container" data-cy="terms-and-conditions-container">
+                                <span class="mp-terms-and-conditions-text">Al continuar, aceptas nuestros</span><a
+                                  class="mp-terms-and-conditions-link"
+                                  href="https://www.mercadopago.com.ar/ayuda/terminos-y-politicas_194"
+                                  target="blank">Términos y condiciones</a></div>
+                            </terms-and-conditions>
+                          </div>
+                        </div>
+
+                        <script type="text/javascript">
+                          if (document.getElementById("payment_method_woo-mercado-pago-custom")) {
+                            jQuery("form.checkout").on("checkout_place_order_woo-mercado-pago-basic", function () {
+                              cardFormLoad();
+                            });
+                          }
+                        </script>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="form-row place-order">
+                    <noscript>
+                      Debido a que tu navegador no es compatible con JavaScript o lo tiene desactivado, por favor,
+                      asegúrate de hacer clic en el botón <em>Actualizar totales</em> antes de realizar tu pedido. De no
+                      hacerlo, se te podría cobrar más de la cantidad indicada arriba. <br /><button type="submit"
+                        class="button alt" name="woocommerce_checkout_update_totals"
+                        value="Actualizar totales">Actualizar totales</button>
+                    </noscript>
+
+                    <div class="woocommerce-terms-and-conditions-wrapper">
+                      <div class="woocommerce-privacy-policy-text">
+                        <p>Sus datos personales se utilizarán para procesar su pedido, respaldar su experiencia en este
+                          sitio web y para otros fines descritos en nuestra <a
+                            href="https://scoobyshop.com.ar/wpautoterms/privacy-policy/"
+                            class="woocommerce-privacy-policy-link" target="_blank">política de privacidad</a>.</p>
+                      </div>
+                      <div class="woocommerce-terms-and-conditions"
+                        style="display: none; max-height: 200px; overflow: auto;">
+                        <style>
+                          .kb-row-layout-id4953_d09355-73>.kt-row-column-wrap {
+                            align-content: start;
+                          }
+
+                          :where(.kb-row-layout-id4953_d09355-73 > .kt-row-column-wrap)>.wp-block-kadence-column {
+                            justify-content: start;
+                          }
+
+                          .kb-row-layout-id4953_d09355-73>.kt-row-column-wrap {
+                            column-gap: var(--global-kb-gap-md, 2rem);
+                            row-gap: var(--global-kb-gap-md, 2rem);
+                            padding-top: var(--global-kb-spacing-sm, 1.5rem);
+                            padding-bottom: var(--global-kb-spacing-sm, 1.5rem);
+                          }
+
+                          .kb-row-layout-id4953_d09355-73>.kt-row-column-wrap>div:not(.added-for-specificity) {
+                            grid-column: initial;
+                          }
+
+                          .kb-row-layout-id4953_d09355-73>.kt-row-column-wrap {
+                            grid-template-columns: minmax(0, 1fr);
+                          }
+
+                          .kb-row-layout-id4953_d09355-73>.kt-row-layout-overlay {
+                            opacity: 0.30;
+                          }
+
+                          @media all and (max-width: 1024px) {
+                            .kb-row-layout-id4953_d09355-73>.kt-row-column-wrap>div:not(.added-for-specificity) {
+                              grid-column: initial;
+                            }
+                          }
+
+                          @media all and (max-width: 1024px) {
+                            .kb-row-layout-id4953_d09355-73>.kt-row-column-wrap {
+                              grid-template-columns: minmax(0, 1fr);
+                            }
+                          }
+
+                          @media all and (max-width: 767px) {
+                            .kb-row-layout-id4953_d09355-73>.kt-row-column-wrap>div:not(.added-for-specificity) {
+                              grid-column: initial;
+                            }
+
+                            .kb-row-layout-id4953_d09355-73>.kt-row-column-wrap {
+                              grid-template-columns: minmax(0, 1fr);
+                            }
+                          }
+                        </style>
+                        <div
+                          class="kb-row-layout-wrap kb-row-layout-id4953_d09355-73 alignnone wp-block-kadence-rowlayout">
+                          <div
+                            class="kt-row-column-wrap kt-has-3-columns kt-row-layout-row kt-tab-layout-inherit kt-mobile-layout-row kt-row-valign-top">
+                            <style>
+                              .kadence-column4953_5fa4c4-dc>.kt-inside-inner-col,
+                              .kadence-column4953_5fa4c4-dc>.kt-inside-inner-col:before {
+                                border-top-left-radius: 0px;
+                                border-top-right-radius: 0px;
+                                border-bottom-right-radius: 0px;
+                                border-bottom-left-radius: 0px;
+                              }
+
+                              .kadence-column4953_5fa4c4-dc>.kt-inside-inner-col {
+                                column-gap: var(--global-kb-gap-sm, 1rem);
+                              }
+
+                              .kadence-column4953_5fa4c4-dc>.kt-inside-inner-col {
+                                flex-direction: column;
+                              }
+
+                              .kadence-column4953_5fa4c4-dc>.kt-inside-inner-col>.aligncenter {
+                                width: 100%;
+                              }
+
+                              .kadence-column4953_5fa4c4-dc>.kt-inside-inner-col:before {
+                                opacity: 0.3;
+                              }
+
+                              .kadence-column4953_5fa4c4-dc {
+                                position: relative;
+                              }
+
+                              @media all and (max-width: 1024px) {
+                                .kadence-column4953_5fa4c4-dc>.kt-inside-inner-col {
+                                  flex-direction: column;
+                                }
+                              }
+
+                              @media all and (max-width: 767px) {
+                                .kadence-column4953_5fa4c4-dc>.kt-inside-inner-col {
+                                  flex-direction: column;
+                                }
+                              }
+                            </style>
+                            <div class="wp-block-kadence-column kadence-column4953_5fa4c4-dc">
+                              <div class="kt-inside-inner-col">
+                                <ol class="wp-block-list">
+                                  <li>Introducción</li>
+                                </ol>
+                                <style>
+                                  .wp-block-kadence-advancedheading.kt-adv-heading4953_c53704-a4,
+                                  .wp-block-kadence-advancedheading.kt-adv-heading4953_c53704-a4[data-kb-block="kb-adv-heading4953_c53704-a4"] {
+                                    font-size: var(--global-kb-font-size-sm, 0.9rem);
+                                    font-style: normal;
+                                    font-family: Poppins;
+                                  }
+
+                                  .wp-block-kadence-advancedheading.kt-adv-heading4953_c53704-a4 mark.kt-highlight,
+                                  .wp-block-kadence-advancedheading.kt-adv-heading4953_c53704-a4[data-kb-block="kb-adv-heading4953_c53704-a4"] mark.kt-highlight {
+                                    font-style: normal;
+                                    color: #f76a0c;
+                                    -webkit-box-decoration-break: clone;
+                                    box-decoration-break: clone;
+                                    padding-top: 0px;
+                                    padding-right: 0px;
+                                    padding-bottom: 0px;
+                                    padding-left: 0px;
+                                  }
+                                </style>
+                                <p class="kt-adv-heading4953_c53704-a4 wp-block-kadence-advancedheading"
+                                  data-kb-block="kb-adv-heading4953_c53704-a4">Las presentes Condiciones Generales se
+                                  aplican a este sitio web y a las transacciones relacionadas con nuestros productos y
+                                  servicios. Usted puede estar obligado por contratos adicionales relacionados con su
+                                  relación con nosotros o con cualquier producto o servicio que reciba de nosotros. Si
+                                  alguna de las disposiciones de los contratos adicionales entra en conflicto con alguna
+                                  de las disposiciones de estas Condiciones, prevalecerán las disposiciones de dichos
+                                  contratos adicionales.</p>
+                              </div>
+                            </div>
+                            <style>
+                              .kadence-column4953_1dd482-30>.kt-inside-inner-col,
+                              .kadence-column4953_1dd482-30>.kt-inside-inner-col:before {
+                                border-top-left-radius: 0px;
+                                border-top-right-radius: 0px;
+                                border-bottom-right-radius: 0px;
+                                border-bottom-left-radius: 0px;
+                              }
+
+                              .kadence-column4953_1dd482-30>.kt-inside-inner-col {
+                                column-gap: var(--global-kb-gap-sm, 1rem);
+                              }
+
+                              .kadence-column4953_1dd482-30>.kt-inside-inner-col {
+                                flex-direction: column;
+                              }
+
+                              .kadence-column4953_1dd482-30>.kt-inside-inner-col>.aligncenter {
+                                width: 100%;
+                              }
+
+                              .kadence-column4953_1dd482-30>.kt-inside-inner-col:before {
+                                opacity: 0.3;
+                              }
+
+                              .kadence-column4953_1dd482-30 {
+                                position: relative;
+                              }
+
+                              @media all and (max-width: 1024px) {
+                                .kadence-column4953_1dd482-30>.kt-inside-inner-col {
+                                  flex-direction: column;
+                                }
+                              }
+
+                              @media all and (max-width: 767px) {
+                                .kadence-column4953_1dd482-30>.kt-inside-inner-col {
+                                  flex-direction: column;
+                                }
+                              }
+                            </style>
+                            <div class="wp-block-kadence-column kadence-column4953_1dd482-30">
+                              <div class="kt-inside-inner-col">
+                                <p class="has--font-size">2. Encuadernación</p>
+                                <p class="has-sm-font-size">Al registrarse en este sitio web, acceder a él o utilizarlo
+                                  de cualquier otro modo, usted acepta quedar vinculado por las presentes Condiciones
+                                  que se exponen a continuación. El mero uso de este sitio web implica el conocimiento y
+                                  la aceptación de estos Términos y condiciones. En algunos casos particulares, también
+                                  podemos pedirle que acepte explícitamente.</p>
+                              </div>
+                            </div>
+                            <style>
+                              .kadence-column4953_015102-dc>.kt-inside-inner-col,
+                              .kadence-column4953_015102-dc>.kt-inside-inner-col:before {
+                                border-top-left-radius: 0px;
+                                border-top-right-radius: 0px;
+                                border-bottom-right-radius: 0px;
+                                border-bottom-left-radius: 0px;
+                              }
+
+                              .kadence-column4953_015102-dc>.kt-inside-inner-col {
+                                column-gap: var(--global-kb-gap-sm, 1rem);
+                              }
+
+                              .kadence-column4953_015102-dc>.kt-inside-inner-col {
+                                flex-direction: column;
+                              }
+
+                              .kadence-column4953_015102-dc>.kt-inside-inner-col>.aligncenter {
+                                width: 100%;
+                              }
+
+                              .kadence-column4953_015102-dc>.kt-inside-inner-col:before {
+                                opacity: 0.3;
+                              }
+
+                              .kadence-column4953_015102-dc {
+                                position: relative;
+                              }
+
+                              @media all and (max-width: 1024px) {
+                                .kadence-column4953_015102-dc>.kt-inside-inner-col {
+                                  flex-direction: column;
+                                }
+                              }
+
+                              @media all and (max-width: 767px) {
+                                .kadence-column4953_015102-dc>.kt-inside-inner-col {
+                                  flex-direction: column;
+                                }
+                              }
+                            </style>
+                            <div class="wp-block-kadence-column kadence-column4953_015102-dc">
+                              <div class="kt-inside-inner-col">
+                                <ol start="3" class="wp-block-list">
+                                  <li>Comunicación electrónica</li>
+                                </ol>
+                                <p>Al utilizar este sitio web o comunicarse con nosotros por medios electrónicos, usted
+                                  acepta y reconoce que podemos comunicarnos con usted electrónicamente en nuestro sitio
+                                  web o enviándole un correo electrónico, y acepta que todos los acuerdos, avisos,
+                                  divulgaciones y otras comunicaciones que le proporcionemos electrónicamente satisfacen
+                                  cualquier requisito legal, incluido, entre otros, el requisito de que dichas
+                                  comunicaciones se realicen por escrito.</p>
+                                <ol start="4" class="wp-block-list">
+                                  <li>Propiedad intelectual</li>
+                                </ol>
+                                <p>Nosotros o nuestros licenciantes poseemos y controlamos todos los derechos de autor y
+                                  otros derechos de propiedad intelectual sobre el sitio web y los datos, información y
+                                  otros recursos mostrados por o accesibles dentro del sitio web.</p>
+                                <p>Todos los derechos reservados</p>
+                                <p>A menos que el contenido específico indique lo contrario, no se le concede una
+                                  licencia ni ningún otro derecho en virtud de derechos de autor, marcas comerciales,
+                                  patentes u otros derechos de propiedad intelectual. Esto significa que usted no
+                                  utilizará, copiará, reproducirá, ejecutará, mostrará, distribuirá, incrustará en
+                                  ningún medio electrónico, alterará, realizará ingeniería inversa, descompilará,
+                                  transferirá, descargará, transmitirá, monetizará, venderá, comercializará o
+                                  comercializará ningún recurso de este sitio web de ninguna forma, sin nuestro permiso
+                                  previo por escrito, excepto y sólo en la medida en que se estipule lo contrario en
+                                  normas de derecho imperativo (como el derecho de cita)</p>
+                                <ol start="5" class="wp-block-list">
+                                  <li>Propiedad de terceros</li>
+                                </ol>
+                                <p>Nuestro sitio web puede incluir hipervínculos u otras referencias a sitios web de
+                                  terceros. No controlamos ni revisamos el contenido de los sitios web de terceros a los
+                                  que se acceda mediante enlaces desde este sitio web. Los productos o servicios
+                                  ofrecidos por otros sitios web estarán sujetos a los Términos y Condiciones aplicables
+                                  de dichos terceros. Las opiniones expresadas o el material que aparezca en esos sitios
+                                  web no son necesariamente compartidos o respaldados por nosotros.</p>
+                                <p>No seremos responsables de las prácticas de privacidad ni del contenido de esos
+                                  sitios. Usted asume todos los riesgos asociados al uso de estos sitios web y de
+                                  cualquier servicio relacionado de terceros. No aceptaremos ninguna responsabilidad por
+                                  cualquier pérdida o daño, sea cual sea su causa, derivado de la divulgación de
+                                  información personal a terceros.</p>
+                                <ol start="6" class="wp-block-list">
+                                  <li>Uso responsable</li>
+                                </ol>
+                                <p>Al visitar nuestro sitio web, usted se compromete a utilizarlo únicamente para los
+                                  fines previstos y según lo permitido por estas Condiciones, cualquier contrato
+                                  adicional con nosotros, y las leyes, reglamentos y prácticas en línea generalmente
+                                  aceptadas y directrices de la industria. No debe utilizar nuestro sitio web o nuestros
+                                  servicios para utilizar, publicar o distribuir ningún material que consista en (o esté
+                                  vinculado a) software informático malicioso; utilizar los datos recogidos en nuestro
+                                  sitio web para cualquier actividad de marketing directo, o llevar a cabo cualquier
+                                  actividad sistemática o automatizada de recogida de datos en o en relación con nuestro
+                                  sitio web.</p>
+                                <p>Queda terminantemente prohibida cualquier actividad que cause o pueda causar daños al
+                                  sitio web o que interfiera en su funcionamiento, disponibilidad o accesibilidad.</p>
+                                <p>7.Registro</p>
+                                <p>Puede registrarse para obtener una cuenta en nuestro sitio web. Durante este proceso,
+                                  es posible que se le pida que elija una contraseña. Usted es responsable de mantener
+                                  la confidencialidad de las contraseñas y de la información de la cuenta y se
+                                  compromete a no compartir sus contraseñas, la información de la cuenta o el acceso
+                                  seguro a nuestro sitio web o a nuestros servicios con ninguna otra persona. No debe
+                                  permitir que ninguna otra persona utilice su cuenta para acceder al sitio web, ya que
+                                  usted es responsable de todas las actividades que se produzcan mediante el uso de sus
+                                  contraseñas o cuentas. Deberá notificarnos inmediatamente si tiene conocimiento de
+                                  cualquier divulgación de su contraseña.</p>
+                                <p>Tras la cancelación de la cuenta, no intentará registrar una nueva cuenta sin nuestro
+                                  permiso.</p>
+                                <p>8. Presentación de ideas<br>No envíe ninguna idea, invento, obra de autor u otra
+                                  información que pueda considerarse propiedad intelectual suya y que desee
+                                  presentarnos, a menos que hayamos firmado previamente un acuerdo relativo a la
+                                  propiedad intelectual o un acuerdo de no divulgación. Si nos lo revela sin dicho
+                                  acuerdo escrito, nos concede una licencia mundial, irrevocable, no exclusiva y libre
+                                  de regalías para utilizar, reproducir, almacenar, adaptar, publicar, traducir y
+                                  distribuir su contenido en cualquier medio existente o futuro.</p>
+                                <ol start="9" class="wp-block-list">
+                                  <li>Terminación del uso<br>Podemos, a nuestra entera discreción, modificar o
+                                    interrumpir en cualquier momento el acceso, temporal o permanente, al sitio web o a
+                                    cualquier Servicio del mismo. Usted acepta que no seremos responsables ante usted ni
+                                    ante terceros por dicha modificación, suspensión o interrupción de su acceso o uso
+                                    del sitio web o de cualquier contenido que pueda haber compartido en el sitio web.
+                                    Usted no tendrá derecho a ninguna compensación u otro pago, incluso si ciertas
+                                    características, configuraciones, y/o cualquier Contenido que usted haya contribuido
+                                    o en el que haya llegado a confiar, se pierden permanentemente. No debe eludir o
+                                    evitar, o intentar eludir o evitar, cualquier medida de restricción de acceso a
+                                    nuestro sitio web.</li>
+                                </ol>
+                                <p>10.Garantías y responsabilidad<br>Nada en esta sección limitará o excluirá cualquier
+                                  garantía implícita por ley que sería ilegal limitar o excluir. Este sitio web y todo
+                                  su contenido se proporcionan «tal cual» y «según disponibilidad» y pueden incluir
+                                  imprecisiones o errores tipográficos. Renunciamos expresamente a cualquier garantía de
+                                  cualquier tipo, ya sea expresa o implícita, en cuanto a la disponibilidad, exactitud o
+                                  integridad del Contenido. No garantizamos que este sitio web o nuestros productos o
+                                  servicios satisfagan sus necesidades; este sitio web estará disponible de forma
+                                  ininterrumpida, puntual, segura o libre de errores; la calidad de cualquier producto o
+                                  servicio adquirido u obtenido por usted a través de este sitio web satisfaga sus
+                                  expectativas.</p>
+                                <p>Nada de lo contenido en este sitio web constituye ni pretende constituir
+                                  asesoramiento jurídico, financiero o médico de ningún tipo. Si necesita asesoramiento,
+                                  consulte a un profesional adecuado.</p>
+                                <p>Las siguientes disposiciones de esta sección se aplicarán en la medida máxima
+                                  permitida por la legislación aplicable y no limitarán ni excluirán nuestra
+                                  responsabilidad con respecto a cualquier asunto que sería ilegal o ilícito que
+                                  limitáramos o excluyéramos nuestra responsabilidad.<br>En ningún caso seremos
+                                  responsables de los daños directos o indirectos (incluidos los daños por pérdida de
+                                  beneficios o ingresos, pérdida o corrupción de datos, software o bases de datos, o
+                                  pérdida o daño de bienes o datos) en que incurra usted o un tercero como consecuencia
+                                  de su acceso a nuestro sitio web o del uso que haga de él.</p>
+                                <p>Salvo en la medida en que algún contrato adicional establezca expresamente lo
+                                  contrario, nuestra responsabilidad máxima frente a usted por todos los daños derivados
+                                  o relacionados con el sitio web o con cualquiera de los productos y servicios
+                                  comercializados o vendidos a través del sitio web, independientemente de la forma de
+                                  acción legal que imponga la responsabilidad (ya sea por contrato, equidad,
+                                  negligencia, conducta intencionada, responsabilidad extracontractual o de otro tipo)
+                                  se limitará al precio total que usted nos pagó para adquirir dichos productos o
+                                  servicios o utilizar el sitio web. Dicho límite se aplicará en conjunto a todas sus
+                                  reclamaciones, acciones y causas de acción de cualquier tipo y naturaleza.</p>
+                                <p>11.<br>Privacidad<br>Para acceder a nuestro sitio web y/o a nuestros servicios, es
+                                  posible que se le solicite cierta información sobre usted como parte del proceso de
+                                  registro. Usted acepta que toda la información que proporcione será siempre exacta,
+                                  correcta y actualizada.</p>
+                                <p>Nos tomamos muy en serio sus datos personales y nos comprometemos a proteger su
+                                  privacidad. No utilizaremos su dirección de correo electrónico para enviar mensajes no
+                                  solicitados. Cualquier correo electrónico que le enviemos será únicamente en relación
+                                  con la prestación de los productos o servicios acordados.</p>
+                                <ol start="12" class="wp-block-list">
+                                  <li>Restricciones a la exportación / Cumplimiento legal</li>
+                                </ol>
+                                <p>Queda prohibido el acceso a la página web desde territorios o países en los que el
+                                  Contenido o la compra de los productos o Servicios vendidos en la página web sean
+                                  ilegales. Usted no puede utilizar este sitio web en violación de las leyes y
+                                  reglamentos de exportación de Argentina.</p>
+                                <ol start="13" class="wp-block-list">
+                                  <li>Cesión</li>
+                                </ol>
+                                <p>Usted no puede ceder, transferir o subcontratar ninguno de sus derechos y/u
+                                  obligaciones en virtud de estos Términos y condiciones, en su totalidad o en parte, a
+                                  terceros sin nuestro consentimiento previo por escrito. Cualquier pretendida cesión en
+                                  violación de esta Sección será nula y sin efecto.</p>
+                                <p>14.<br>Incumplimiento de las presentes Condiciones<br>Sin perjuicio de los demás
+                                  derechos que nos asisten en virtud de las presentes Condiciones, si usted incumple de
+                                  algún modo las presentes Condiciones, podremos adoptar las medidas que consideremos
+                                  oportunas para hacer frente al incumplimiento, incluida la suspensión temporal o
+                                  permanente de su acceso al sitio web, poniéndonos en contacto con su proveedor de
+                                  servicios de Internet para solicitarle que bloquee su acceso al sitio web, y/o iniciar
+                                  acciones legales contra usted.</p>
+                                <ol start="15" class="wp-block-list">
+                                  <li>Indemnización</li>
+                                </ol>
+                                <p>Usted se compromete a indemnizarnos, defendernos y eximirnos de cualquier
+                                  reclamación, responsabilidad, daños, pérdidas y gastos relacionados con la violación
+                                  por su parte de las presentes Condiciones Generales y de la legislación aplicable,
+                                  incluidos los derechos de propiedad intelectual y los derechos de privacidad. Usted
+                                  nos reembolsará de inmediato por nuestros daños, pérdidas, costos y gastos
+                                  relacionados con o derivados de tales reclamaciones.</p>
+                                <ol start="16" class="wp-block-list">
+                                  <li>Renuncia</li>
+                                </ol>
+                                <p>El incumplimiento de cualquiera de las disposiciones establecidas en las presentes
+                                  Condiciones Generales y en cualquier Contrato, o el no ejercicio de cualquier opción
+                                  de resolución, no se interpretará como una renuncia a dichas disposiciones y no
+                                  afectará a la validez de las presentes Condiciones Generales o de cualquier Contrato o
+                                  parte del mismo, ni al derecho posterior a exigir el cumplimiento de todas y cada una
+                                  de las disposiciones.</p>
+                                <ol start="17" class="wp-block-list">
+                                  <li>Idioma</li>
+                                </ol>
+                                <p>Estos Términos y Condiciones se interpretarán e interpretarán exclusivamente en
+                                  español; castellano. Todas las notificaciones y correspondencia se redactarán
+                                  exclusivamente en dicho idioma.</p>
+                                <ol start="18" class="wp-block-list">
+                                  <li>Acuerdo completo<br>Estos Términos y Condiciones constituirán el acuerdo completo
+                                    entre usted y Scooby Shop en relación con su uso de este sitio web.</li>
+                                  <li>Actualización de estos Términos y Condiciones</li>
+                                </ol>
+                                <p>Podemos actualizar estos Términos y Condiciones de vez en cuando. Es su obligación
+                                  revisar periódicamente estas Condiciones Generales para comprobar si se han producido
+                                  cambios o actualizaciones. La fecha que figura al principio de estas Condiciones
+                                  Generales es la fecha de la última revisión. Las modificaciones de las presentes
+                                  Condiciones Generales entrarán en vigor en el momento de su publicación en este sitio
+                                  web. El uso continuado de este sitio web después de la publicación de los cambios o
+                                  actualizaciones se considerará una notificación de su aceptación de cumplir y estar
+                                  obligado por estos Términos y Condiciones.</p>
+                                <p>20. Elección de la ley y jurisdicción</p>
+                                <p>Estos Términos y Condiciones se regirán por las leyes de Argentina. Cualquier disputa
+                                  relacionada con estos Términos y Condiciones estará sujeta a la jurisdicción de los
+                                  tribunales de Argentina. Si un tribunal u otra autoridad considera que alguna parte o
+                                  disposición de estos Términos y Condiciones es inválida y/o inaplicable en virtud de
+                                  la legislación aplicable, dicha parte o disposición será modificada, eliminada y/o
+                                  aplicada en la máxima medida permitida a fin de dar efecto a la intención de estos
+                                  Términos y Condiciones. Las demás disposiciones no se verán afectadas.</p>
+                                <ol start="21" class="wp-block-list">
+                                  <li>Información de contacto<br>Este sitio web es propiedad y está gestionado por
+                                    Scooby Shop.</li>
+                                </ol>
+                                <p>Puede ponerse en contacto con nosotros en relación con estos Términos y Condiciones
+                                  escribiéndonos o enviándonos un correo electrónico a la siguiente dirección:
+                                  scoobyshoptienda@gmail.com<br>Av. Constituyentes 6177 – CABA</p>
+                                <p></p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="form-row validate-required">
+                        <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
+                          <input type="checkbox"
+                            class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" name="terms"
+                            id="terms">
+                          <span class="woocommerce-terms-and-conditions-checkbox-text">He leído y acepto los términos y
+                            condiciones</span>&nbsp;<abbr class="required" title="obligatorio">*</abbr>
+                        </label>
+                        <input type="hidden" name="terms-field" value="1">
+                      </p>
+                    </div>
+
+
+                    <button type="submit" class="button alt" name="woocommerce_checkout_place_order" id="place_order"
+                      value="Realizar el pedido" data-value="Realizar el pedido">Realizar el pedido</button>
+
+                    <input type="hidden" id="woocommerce-process-checkout-nonce"
+                      name="woocommerce-process-checkout-nonce" value="a97b163a6d"><input type="hidden"
+                      name="_wp_http_referer" value="/?wc-ajax=update_order_review">
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+
+
+
+
+    </article>
+
+
+
+  </div>
+
+</main>

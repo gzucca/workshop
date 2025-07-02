@@ -209,3 +209,19 @@ p {
   display: none !important;
 }
 
+figcaption > a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.kb-gallery-image-contain > img{
+  border-radius: 999px;
+}
+
+.video-container {
+  position: relative;
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+}
+
